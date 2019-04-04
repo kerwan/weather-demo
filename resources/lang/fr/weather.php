@@ -15,5 +15,6 @@ return [
     'temp_min' => 'Temp min.',
     'temp_max' => 'Temp max.',
     'city' => 'Ville',
-    'search_a_city' => 'Rechercher une ville'
+    'search_a_city' => 'Rechercher une ville',
+    'check_the_weather_in_your_city' => 'Vérifiez le temps dans votre ville'
 ];

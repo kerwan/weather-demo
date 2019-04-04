@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/css/app.css"> <!---  css file  --->
+        <link rel="stylesheet" href="/css/app.css">
         <script type="text/javascript" src="/js/app.js"></script>
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
@@ -23,10 +23,12 @@
           	maxZoom: 20,
           	attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
+
+          var marker = L.marker([{{$lat}}, {{$lon}}], { title: "{{ $current_weather->name }}" }).addTo(map);
         });
         </script>
 
-        <title>Check your weather</title>
+        <title>{{ Lang::get('weather.check_the_weather_in_your_city') }}</title>
 
     </head>
 
