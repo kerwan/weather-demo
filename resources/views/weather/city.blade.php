@@ -70,9 +70,13 @@
         <form action="{{ URL::to('current-weather') }}" method="GET">
           <input type="text" name="city" value="" placeholder="{{ Lang::get('weather.search_a_city') }}">
         </form>
+
+        @include('weather.lang-selector', ['city' => $current_weather->name, 'lang' => \App::getLocale()])
       </div>
 
-      <div id="map"></div>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
 
     </body>
 </html>

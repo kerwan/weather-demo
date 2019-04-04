@@ -16,5 +16,7 @@ return [
     'temp_max' => 'Temp max.',
     'city' => 'Ville',
     'search_a_city' => 'Rechercher une ville',
-    'check_the_weather_in_your_city' => 'Vérifiez le temps dans votre ville'
+    'check_the_weather_in_your_city' => 'Vérifiez le temps dans votre ville',
+    'check_this_website_in_english' => 'Voir ce site en anglais',
+    'check_this_website_in_french' => 'Voir ce site en français',
 ];

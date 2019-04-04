@@ -91,3 +91,56 @@
   right: 10px !important;
   bottom: 20px !important;
 }
+
+.lang-selector {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang-selector a {
+  padding: 5px;
+  color: #FFFFFF;
+}
+
+.lang-selector a.selected {
+  pointer-events: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
+
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city-weather {
+    border-radius: 0;
+  }
+
+  .city-weather,
+  .city-search {
+    position: relative;
+    width: 100vw;
+  }
+
+  .map-container {
+    position: relative;
+    flex: 1;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: relative;
+  }
+
+}
