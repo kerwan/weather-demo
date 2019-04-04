@@ -1,0 +1,93 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.city-search {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  width: calc(100vw - 250px);
+  background-color: #555;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-search form {
+  flex: 1;
+}
+
+.city-search form input {
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.city-weather {
+  width: 250px;
+  border: 1px solid #555555;
+  border-radius: 0px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  background-color: #555555;
+  color: #FFFFFF;
+  z-index: 2;
+  position: absolute;
+}
+
+.city-infos {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.weather {
+  display: flex;
+  flex-direction: row;
+}
+
+.weather .weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.weather .description {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.temperature-title {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+.value {
+  font-style: italic;
+}
+
+#map {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.leaflet-control-zoom {
+  position: fixed !important;
+  right: 10px !important;
+  bottom: 20px !important;
+}
