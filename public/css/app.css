@@ -8364,6 +8364,7 @@ button.close {
 }
 
 .city-weather {
+  min-height: 90px;
   width: 250px;
   border: 1px solid #555555;
   border-radius: 0px;
@@ -8373,6 +8374,12 @@ button.close {
   color: #FFFFFF;
   z-index: 2;
   position: absolute;
+}
+
+.city-weather .error {
+  font-weight: bold;
+  color: #d39e00;
+  font-size: 1.3em;
 }
 
 .city-infos {

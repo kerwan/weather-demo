@@ -19,4 +19,5 @@ return [
     'check_the_weather_in_your_city' => 'Check the weather in your city',
     'check_this_website_in_english' => 'Check this website in english',
     'check_this_website_in_french' => 'Check this website in french',
+    'error_code_404' => 'No city found with this name'
 ];

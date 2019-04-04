@@ -18,13 +18,13 @@
 
         <script>
         document.addEventListener("DOMContentLoaded", function() {
-          var map = L.map('map').setView([{{$lat}}, {{$lon}}], 13);
+          var map = L.map('map').setView([{{$lat}}, {{$lon}}], {{$zoom}});
           var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
           	maxZoom: 20,
           	attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
 
-          var marker = L.marker([{{$lat}}, {{$lon}}], { title: "{{ $current_weather->name }}" }).addTo(map);
+          var marker = L.marker([{{$lat}}, {{$lon}}], { title: "{{ $city }}" }).addTo(map);
         });
         </script>
 
@@ -36,8 +36,9 @@
 
       <div class="city-weather">
 
+        @if(empty($error))
         <div class="city-infos">
-          <div class="city-name">{{ $current_weather->name }}</div>
+          <div class="city-name">{{ $city }}</div>
         </div>
 
 
@@ -63,6 +64,11 @@
             <span class="unit">&#8451;</span>
           </div>
         </div>
+        @else
+        <div class="error">
+          {{ $error }}
+        </div>
+        @endif
 
       </div>
 
@@ -71,7 +77,7 @@
           <input type="text" name="city" value="" placeholder="{{ Lang::get('weather.search_a_city') }}">
         </form>
 
-        @include('weather.lang-selector', ['city' => $current_weather->name, 'lang' => \App::getLocale()])
+        @include('weather.lang-selector', ['city' => $city, 'lang' => \App::getLocale()])
       </div>
 
       <div class="map-container">
