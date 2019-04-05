@@ -8460,12 +8460,13 @@ button.close {
 
 .lang-selector a {
   padding: 5px;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .lang-selector a.selected {
   pointer-events: none;
-  color: #000000;
+  color: #FFFFFF;
+  text-decoration: underline;
   font-weight: bold;
 }
 
