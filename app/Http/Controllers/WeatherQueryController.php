@@ -21,9 +21,13 @@ class WeatherQueryController extends Controller
   public function showCurrentWeatherForCity() {
 
     // getting the requested city or setting back to default (Montpellier)
+    // TODO: detect the default city with an ip geolocation request ?
+    // we could use something like this one : https://api.ipdata.co/?api-key=test
     $city = !empty(\Request::get('city')) ? \Request::get('city') : 'Montpellier';
 
     // setting back locale from the request or setting back to default (en)
+    // TODO: detect preferred locale from HTTP-ACCEPT-LANGUAGE
+    // or use a specialized package like https://github.com/mcamara/laravel-localization
     $this->checkAndSetLang(\Request::get('lang'));
 
     $openWeather = new OpenWeather(\Config::get('weather.api_key'), 'metric', \App::getLocale());
