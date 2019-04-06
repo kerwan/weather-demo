@@ -19,13 +19,24 @@ git clone https://github.com/kerwan/weather-demo.git
 ```
 
 Install dependencies with composer
+
 ```
 composer install
 ```
 
 After installing Laravel, you should configure your web server's document / web root to be the public directory. The index.php in this directory serves as the front controller for all HTTP requests entering your application.
 
-Rename .env.example to .env
+Copy .env.example to .env
+
+```
+cp .env.example .env
+```
+
+Generate app key
+
+```
+artisan key:generate
+```
 
 For more info check [Laravel install doc](https://laravel.com/docs/5.8/installation)
 
