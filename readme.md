@@ -2,36 +2,46 @@
 
 Simple weather checking application for a city using Laravel, leaflet and OpenWeatherMap API
 
-## Getting Started
-
-TODO: installation instructions
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
+PHP >= 7.1.3
 
-```
-Give examples
-```
+Composer
+
+Apache or NGINX
 
 ### Installing
 
-TODO: installation instructions
+Clone the repo
+
+```
+git clone https://github.com/kerwan/weather-demo.git
+```
+
+Install dependencies with composer
+```
+composer install
+```
+
+After installing Laravel, you should configure your web server's document / web root to be the public directory. The index.php in this directory serves as the front controller for all HTTP requests entering your application.
+
+Rename .env.example to .env
+
+For more info check [Laravel install doc](https://laravel.com/docs/5.8/installation)
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+in command line run
 
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+```
+phpunit
+```
 
 ## Built With
 
 * [Laravel](https://laravel.com/) - The web framework used
 * [Leaflet](https://leafletjs.com/) - Interactive JS maps
+* Love
 
 ## Authors
 

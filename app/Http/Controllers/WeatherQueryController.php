@@ -12,6 +12,7 @@ use App\OpenWeather\OpenWeather;
 class WeatherQueryController extends Controller
 {
 
+  // where to put the map coordinates in case of error
   private static $error_lat = '46.52863469527167';
   private static $error_lon = '2.43896484375';
 

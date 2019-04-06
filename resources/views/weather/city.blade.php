@@ -73,7 +73,7 @@
       </div>
 
       <div class="city-search">
-        <form action="{{ URL::to('current-weather') }}" method="GET">
+        <form action="{{ URL::to('/') }}" method="GET">
           <input type="hidden" name="lang" value="{{ \App::getLocale() }}">
           <input type="text" name="city" value="" placeholder="{{ Lang::get('weather.search_a_city') }}">
         </form>

@@ -12,5 +12,3 @@
 */
 
 Route::get('/', 'WeatherQueryController@showCurrentWeatherForCity');
-Route::get('/current-weather', 'WeatherQueryController@showCurrentWeatherForCity');
-Route::get('/forecast', 'WeatherQueryController@showWeatherForecastForCity');
